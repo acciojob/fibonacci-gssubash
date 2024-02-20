@@ -1,16 +1,15 @@
 function fibonacci(num) {
 // your code here
-	let result = 0,f=0,s=1;
-	if(num==1)
-		return f;
-	if(num==2)
-		return s;
-	for(let i=0;i<(num-2);i++){
-		result = f+s;
-		f = s;
-		s = result;
+	let f=0,s=1;
+	if(num==1)return 0;
+	if(num==1)return 1;
+
+	for(let i=3;i<=num;i++){
+		let result = f+s;
+		f=s;
+		s =result;
 	}
-	return result;
+	return s;
 	
 }
 
